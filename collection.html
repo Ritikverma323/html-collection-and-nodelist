@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+    </ul>
+    <button class="item">Add Item</button>
+    <button class="btn">check value</button>
+  </body>
+
+  <script>
+    let collection = document.getElementsByTagName("li");
+    let nodelist = document.querySelectorAll("li");
+    console.log(collection);
+    console.log(nodelist);
+    let buttons = document.getElementsByClassName("btn");
+    buttons[0].addEventListener("click", () => {
+      console.log(collection);
+      console.log(nodelist);
+    });
+
+    document.getElementsByClassName("item")[0].addEventListener("click", () => {
+      let ul = document.querySelector("ul");
+      let li = document.createElement("li");
+      li.appendChild(document.createTextNode("items"));
+      ul.appendChild(li);
+    });
+  </script>
+</html>
